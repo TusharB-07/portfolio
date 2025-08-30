@@ -1,0 +1,207 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Deep Sea Design System - All colors MUST be HSL */
+
+@layer base {
+  :root {
+    /* Core Colors - Light Ocean Surface */
+    --background: 200 30% 98%;
+    --foreground: 200 100% 8%;
+
+    /* Card System - Floating on waves */
+    --card: 195 40% 96%;
+    --card-foreground: 200 100% 8%;
+    --card-hover: 195 50% 94%;
+
+    /* Popover */
+    --popover: 195 40% 96%;
+    --popover-foreground: 200 100% 8%;
+
+    /* Brand Colors - Deep Ocean Blues */
+    --primary: 200 100% 25%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 195 100% 35%;
+
+    /* Secondary - Shallow waters */
+    --secondary: 190 30% 90%;
+    --secondary-foreground: 200 100% 8%;
+
+    /* Muted - Misty ocean */
+    --muted: 190 25% 92%;
+    --muted-foreground: 200 50% 40%;
+
+    /* Accent - Deep sea teal */
+    --accent: 180 100% 25%;
+    --accent-foreground: 0 0% 100%;
+    --accent-glow: 175 100% 35%;
+
+    /* States */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders & Inputs - Gentle waves */
+    --border: 190 30% 85%;
+    --input: 190 30% 85%;
+    --ring: 200 100% 25%;
+
+    /* Gradients - Ocean depths */
+    --gradient-primary: linear-gradient(135deg, hsl(200 100% 25%), hsl(195 100% 35%));
+    --gradient-accent: linear-gradient(135deg, hsl(180 100% 25%), hsl(175 100% 35%));
+    --gradient-surface: linear-gradient(135deg, hsl(195 40% 96%), hsl(190 30% 90%));
+    --gradient-hero: linear-gradient(135deg, hsl(200 100% 25%) 0%, hsl(180 100% 25%) 50%, hsl(175 100% 35%) 100%);
+
+    /* Shadows - Deep water shadows */
+    --shadow-soft: 0 2px 8px hsl(200 100% 8% / 0.08);
+    --shadow-medium: 0 4px 20px hsl(200 100% 8% / 0.12);
+    --shadow-strong: 0 8px 32px hsl(200 100% 8% / 0.16);
+    --shadow-glow: 0 0 40px hsl(200 100% 25% / 0.15);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 190 30% 96%;
+    --sidebar-foreground: 200 100% 8%;
+    --sidebar-primary: 200 100% 25%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 190 25% 92%;
+    --sidebar-accent-foreground: 200 100% 8%;
+    --sidebar-border: 190 30% 85%;
+    --sidebar-ring: 200 100% 25%;
+  }
+
+  .dark {
+    /* Core Colors - Deep ocean floor */
+    --background: 200 50% 6%;
+    --foreground: 190 40% 90%;
+
+    /* Card System - Underwater caverns */
+    --card: 200 45% 8%;
+    --card-foreground: 190 40% 90%;
+    --card-hover: 200 40% 10%;
+
+    /* Popover */
+    --popover: 200 45% 8%;
+    --popover-foreground: 190 40% 90%;
+
+    /* Brand Colors - Bioluminescent blues */
+    --primary: 195 100% 50%;
+    --primary-foreground: 200 50% 6%;
+    --primary-glow: 200 100% 60%;
+
+    /* Secondary - Deep currents */
+    --secondary: 200 40% 12%;
+    --secondary-foreground: 190 40% 90%;
+
+    /* Muted - Murky depths */
+    --muted: 200 35% 10%;
+    --muted-foreground: 190 25% 60%;
+
+    /* Accent - Glowing sea life */
+    --accent: 175 100% 45%;
+    --accent-foreground: 200 50% 6%;
+    --accent-glow: 180 100% 55%;
+
+    /* States */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 190 40% 90%;
+
+    /* Borders & Inputs - Abyssal edges */
+    --border: 200 35% 15%;
+    --input: 200 35% 15%;
+    --ring: 195 100% 50%;
+
+    /* Gradients - Underwater light */
+    --gradient-primary: linear-gradient(135deg, hsl(195 100% 50%), hsl(200 100% 60%));
+    --gradient-accent: linear-gradient(135deg, hsl(175 100% 45%), hsl(180 100% 55%));
+    --gradient-surface: linear-gradient(135deg, hsl(200 45% 8%), hsl(200 40% 10%));
+    --gradient-hero: linear-gradient(135deg, hsl(195 100% 50%) 0%, hsl(175 100% 45%) 50%, hsl(180 100% 55%) 100%);
+
+    /* Shadows - Abyssal darkness */
+    --shadow-soft: 0 2px 8px hsl(200 50% 3% / 0.4);
+    --shadow-medium: 0 4px 20px hsl(200 50% 3% / 0.5);
+    --shadow-strong: 0 8px 32px hsl(200 50% 3% / 0.6);
+    --shadow-glow: 0 0 40px hsl(195 100% 50% / 0.25);
+    
+    --sidebar-background: 200 45% 5%;
+    --sidebar-foreground: 190 40% 90%;
+    --sidebar-primary: 195 100% 50%;
+    --sidebar-primary-foreground: 200 50% 6%;
+    --sidebar-accent: 200 35% 10%;
+    --sidebar-accent-foreground: 190 40% 90%;
+    --sidebar-border: 200 35% 15%;
+    --sidebar-ring: 195 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Prose styling for blog posts */
+  .prose {
+    @apply text-foreground;
+  }
+  
+  .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+    @apply text-foreground font-bold;
+  }
+  
+  .prose h1 {
+    @apply text-3xl md:text-4xl mb-6 mt-8;
+  }
+  
+  .prose h2 {
+    @apply text-2xl md:text-3xl mb-4 mt-8;
+  }
+  
+  .prose h3 {
+    @apply text-xl md:text-2xl mb-3 mt-6;
+  }
+  
+  .prose p {
+    @apply mb-4 leading-relaxed;
+  }
+  
+  .prose strong {
+    @apply font-semibold text-foreground;
+  }
+  
+  .prose ul, .prose ol {
+    @apply my-4 pl-6;
+  }
+  
+  .prose li {
+    @apply mb-2;
+  }
+  
+  .prose code {
+    @apply bg-muted px-1.5 py-0.5 rounded text-sm font-mono;
+  }
+  
+  .prose pre {
+    @apply bg-muted p-4 rounded-lg overflow-x-auto my-4;
+  }
+  
+  .prose blockquote {
+    @apply border-l-4 border-primary pl-4 italic my-4;
+  }
+
+  /* Line clamp utilities */
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
